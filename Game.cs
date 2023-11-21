@@ -5,10 +5,14 @@ namespace ProjetNarratif
     internal class Game
     {
         List<Room> rooms = new();
+        static Ghost ghost;
         Room currentRoom;
         internal bool IsGameOver() => isFinished;
         static bool isFinished;
         static string nextRoom = "";
+
+
+        public static Ghost GetGhost() => ghost;
 
         internal void Add(Room room)
         {

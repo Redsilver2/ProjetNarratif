@@ -25,12 +25,15 @@ Dans ton armoire, tu aperçois le [grenier]
                     else
                     {
                         Console.WriteLine("Tu ouvres la porte avec ta clé et tu sors de ta chambre.");
-                        Game.Finish();
+                        Console.WriteLine("Tu entres dans le sallon.");
+                        Game.Transition<LivingRoom>();
                     }
                     break;
                 case "grenier":
                     Console.WriteLine("Tu montes dans le grenier.");
                     Game.Transition<AtticRoom>();
+                    break;
+                case "sallon":
                     break;
                 default:
                     Console.WriteLine("Commande invalide.");
